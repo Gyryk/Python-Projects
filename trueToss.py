@@ -39,9 +39,9 @@ def getGuess():
     global guess
     global choseHeads
 
-    guess = input("Heads or tails?\n")
+    guess = input("Heads or tails?\n").lower().strip()
     # Force the user to take tails if they give an invalid response
-    if guess == "heads" or guess == "Heads" or guess == "h":
+    if guess[0] == "h":
         choseHeads = True
         print("Tossing the coin, your choice is heads")
         toss()
