@@ -2,7 +2,7 @@
 import random
 
 # Probability
-heads = 50983
+heads = 50982
 tails = 49000
 edges = 17
 
@@ -17,9 +17,10 @@ def toss():
     global tails
     global edges
 
-    outcome = random.randrange(1, 100001, 1)
+    outcome = random.randrange(0, 100000, 1)
     if outcome <= edges:
-        print('Wow the coin landed on its edge, try again')
+        print('Wow the coin landed on its edge, lets try again')
+        toss()
     elif outcome <= heads + edges:
         if choseHeads:
             print("Lucky you, it's heads")
