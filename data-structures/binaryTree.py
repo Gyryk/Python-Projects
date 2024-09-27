@@ -32,6 +32,21 @@ def find(self, find_key):
         else:
             print("Key does not exist in tree")
 
+# Function to invert the tree
+def invertTree(self, root):
+        if root is None: 
+            return root
+        if root.left is not None or root.right is not None:
+            root.right, root.left = root.left, root.right
+            if root.left is not None:
+                root.left = self.invertTree(root.left)
+            if root.right is not None:
+                root.right = self.invertTree(root.right)
+        else:
+            return root
+
+        return root
+
 # Function to display the output of the tree
 def display(root):
     if root:
@@ -48,6 +63,7 @@ r = insert(r, 70)
 r = insert(r, 60)
 r = insert(r, 80)
 
+invertTree(r)
 display(r)
 
 find(r, 30)
